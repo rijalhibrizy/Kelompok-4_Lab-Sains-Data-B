@@ -1,0 +1,16 @@
+{
+  "name": "rameza-stock",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Rameza Stock - aplikasi manajemen persediaan bahan makanan warung makan",
+  "scripts": {
+    "db:init": "wrangler d1 execute rameza-stock-db --local --file=db/schema.sql && wrangler d1 execute rameza-stock-db --local --file=db/seed.sql",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:remote": "wrangler d1 execute rameza-stock-db --remote --file=db/schema.sql && wrangler d1 execute rameza-stock-db --remote --file=db/seed.sql",
+    "hash": "node scripts/hash.mjs",
+    "test": "node --no-warnings test/api.test.mjs"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" }
+}

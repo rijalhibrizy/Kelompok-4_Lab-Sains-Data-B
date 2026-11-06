@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rameza Stock - Manajemen Persediaan Warung Makan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="login" hidden>
+  <form id="loginForm" class="card login-card">
+    <div class="logo">🍚</div>
+    <h1>Rameza Stock</h1>
+    <p class="muted">Kelola persediaan bahan makanan warung Anda</p>
+    <label>Username<input name="username" autocomplete="username" required autofocus></label>
+    <label>Kata sandi<input name="password" type="password" autocomplete="current-password" required></label>
+    <p class="error" id="loginErr"></p>
+    <button class="btn primary" type="submit">Masuk</button>
+    <p class="demo">Akun demo: <b>admin</b> / <b>Rameza123</b></p>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <header class="topbar">
+    <div class="brand">🍚 Rameza Stock</div>
+    <nav id="nav">
+      <button data-v="dashboard">Dashboard</button>
+      <button data-v="bahan">Bahan</button>
+      <button data-v="riwayat">Riwayat</button>
+      <button data-v="laporan">Laporan</button>
+    </nav>
+    <div class="user"><span id="userName"></span><button class="btn small" id="logout">Keluar</button></div>
+  </header>
+  <main id="view"></main>
+</div>
+
+<dialog id="dlg"></dialog>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+name = "rameza-stock"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Frontend statis; hanya /api/* yang dijalankan oleh Worker
+[assets]
+directory = "./public"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "rameza-stock-db"
+# Untuk pengembangan lokal ID ini cukup. Untuk deploy, ganti dengan ID dari `wrangler d1 create`.
+database_id = "00000000-0000-0000-0000-000000000000"
